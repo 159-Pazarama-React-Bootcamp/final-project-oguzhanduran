@@ -1,5 +1,6 @@
 h1,
-h2 {
+h2,
+h4 {
   text-align: center;
 }
 
@@ -8,32 +9,30 @@ h2 {
   width: 808.06500244140625px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   margin-left: 75px;
-  background-color: rgb(237, 250, 246);
+  background-color: rgb(255, 187, 209);
   margin-top: 43px;
-}
-
-.hidden {
-  display: none;
-  text-align: center;
-  margin-left: 100px;
-}
-
-.inputMoveRight {
-  float: left;
-  margin-right: 20px;
-}
-
-.fileInput {
-  text-align: center;
-}
-
-.buttonForm {
-  margin-left: 208px;
-  border-radius: 40px;
 }
 
 .buttonQuery {
   background-color: rgb(138, 34, 185);
+  width: 200.08px;
+  height: 48.59px;
+  margin-left: 100px;
+
+  /* Text */
+
+  padding-left: 75px;
+}
+
+.buttonAdmin {
+  background-color: rgb(153, 22, 72);
+  width: 200.08px;
+  height: 48.59px;
+  margin-left: 100px;
+
+  /* Text */
+
+  padding-left: 75px;
 }
 
 .queryContainer {
@@ -70,4 +69,32 @@ h2 {
   color: #414042;
   margin-bottom: 5px;
   margin-left: 50px;
+}
+
+.adminInput {
+  width: 300px;
+  height: 48.59px;
+  left: calc(50% - 394.08px / 2 - 425.84px);
+  top: calc(50% - 48.59px / 2 - 149.9px);
+
+  background: #ffffff;
+  border: 1px solid #bcbec0;
+  box-sizing: border-box;
+  margin-top: 7.78px;
+  padding-left: 21.67px;
+
+  /* Text */
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+
+  color: #414042;
+  margin-bottom: 5px;
+  margin-left: 50px;
+  border-radius: 40px;
+  margin-bottom: 10px;
 }

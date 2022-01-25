@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 function InputField(props) {
   /*Biz aşağıda değişken olan değerleri (type, placeholder, label) destructuring yöntemiyle propstan alıp farklı componentlerde farklı isim ve şekillerle kullanmak adına düzenledik */
 
-  const { label, type, placeholder, value, onChange } = props;
+  const { label, type, placeholder, value, onChange, name, onBlur } = props;
 
   return (
     <div className="field-container">
@@ -17,8 +17,9 @@ function InputField(props) {
           className="field-input"
           type={type}
           placeholder={placeholder}
+          name={name}
+          onBlur={onBlur}
         />
-        {type === 'password' && <span className="field-password">Forgot Password?</span>}
       </div>
     </div>
   );
@@ -27,9 +28,11 @@ function InputField(props) {
 InputField.propTypes = {
   label: PropTypes.string,
   type: PropTypes.string,
-  placeholder: PropTypes.string,
+  placeholder: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
   value: PropTypes.string,
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
+  name: PropTypes.string,
+  onBlur: PropTypes.func
 };
 
 export default InputField;

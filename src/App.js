@@ -1,9 +1,8 @@
-import CreateApplication from './pages/CreateApplication/CreateApplication';
-
+import SuccessfulApplication from './Application/pages/SuccessfulApplication/SuccessfulApplication';
 function App() {
   return (
     <div className="App">
-      <CreateApplication />
+      <SuccessfulApplication />
     </div>
   );
 }

@@ -3,11 +3,11 @@ import './index.css';
 import PropTypes from 'prop-types';
 
 function Button(props) {
-  const { buttonName, onClick, className } = props;
+  const { buttonName, onClick, className, type } = props;
   return (
     <div className="button">
-      <button onClick={onClick} className={className}>
-        {buttonName}{' '}
+      <button onClick={onClick} className={className} type={type}>
+        {buttonName}
       </button>
     </div>
   );
@@ -16,7 +16,8 @@ function Button(props) {
 Button.propTypes = {
   buttonName: PropTypes.string,
   onClick: PropTypes.func,
-  className: PropTypes.string
+  className: PropTypes.string,
+  type: PropTypes.string
 };
 
 export default Button;
