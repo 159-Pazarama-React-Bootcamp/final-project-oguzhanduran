@@ -1,8 +1,9 @@
-import SuccessfulApplication from './Application/pages/SuccessfulApplication/SuccessfulApplication';
+import Routes from './routes';
+
 function App() {
   return (
-    <div className="App">
-      <SuccessfulApplication />
+    <div>
+      <Routes />
     </div>
   );
 }

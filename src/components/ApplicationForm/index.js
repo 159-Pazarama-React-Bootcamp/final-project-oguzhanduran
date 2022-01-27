@@ -4,8 +4,14 @@ import InputField from '../FormInput';
 import './index.css';
 import Button from '../Button';
 import validationSchema from './validation';
+import { useDispatch } from 'react-redux';
+import { submitApplication } from '../../redux/applicationForm/applicationFormSlice'; // aldığımız action'lar.
+import { useHistory } from 'react-router-dom';
 
 function ApplicationForm() {
+  const dispatch = useDispatch();
+  let history = useHistory();
+
   const { handleChange, handleSubmit, values, errors, touched, handleBlur } = useFormik({
     initialValues: {
       name: '',
@@ -14,12 +20,21 @@ function ApplicationForm() {
       identificationNumber: '',
       reasonForApplication: '',
       address: '',
-      attachments: ''
+      attachments: '',
+      applicationNumber: ''
     },
+    validationSchema,
+    // onSubmit: async (values) => {
+    //   values.applicationNumber = Math.floor(Math.random() * 90000) + 10000;
+    //   await dispatch(submitApplicationAsync(values));
+    //   console.log('values');
+    //   history.push('/successfulapplication');
+    // },
     onSubmit: (values) => {
-      console.log(values);
-    },
-    validationSchema
+      dispatch(submitApplication(values));
+
+      history.push('/successfulapplication');
+    }
   });
 
   return (

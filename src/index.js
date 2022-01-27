@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 // import reportWebVitals from './reportWebVitals';
+import { store } from './redux/store';
+import { Provider } from 'react-redux'; // Altındaki sarmalandığı componentlerin tamamına kendisine geçilen store'daki dataları paslar.
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      {/* Bu şekilde store'daki veriler alltaki talip olan componentlere dağıtılıyor. */}
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

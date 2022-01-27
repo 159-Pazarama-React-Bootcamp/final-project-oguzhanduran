@@ -4,14 +4,19 @@ import Button from '../Button';
 import { useFormik } from 'formik';
 import validationSchema from './validation';
 import AdminLogin from '../AdminLogin';
+import { useSelector } from 'react-redux';
 
 function StatusForm() {
+  let applicationCode = useSelector((state) => state.applicationForm.applicationCode);
+
   const { handleChange, handleSubmit, values, errors, touched, handleBlur } = useFormik({
     initialValues: {
       applicationCode: ''
     },
     onSubmit: (values) => {
-      console.log(values);
+      if (applicationCode == values.applicationCode) {
+        console.log('Ahmet');
+      }
     },
     validationSchema
   });

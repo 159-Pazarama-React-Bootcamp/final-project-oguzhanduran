@@ -5,12 +5,8 @@ import StatusForm from '../../components/StatusForm';
 function CreateApplication() {
   return (
     <div>
-      <div>
-        <StatusForm />
-      </div>
-      <div>
-        <ApplicationForm />
-      </div>
+      <StatusForm />
+      <ApplicationForm />
     </div>
   );
 }
