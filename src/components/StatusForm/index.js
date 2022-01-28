@@ -5,17 +5,21 @@ import { useFormik } from 'formik';
 import validationSchema from './validation';
 import AdminLogin from '../AdminLogin';
 import { useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 function StatusForm() {
-  let applicationCode = useSelector((state) => state.applicationForm.applicationCode);
+  const applicationCodes = useSelector((state) => state.applicationForm.applicationCode);
+  const history = useHistory();
 
   const { handleChange, handleSubmit, values, errors, touched, handleBlur } = useFormik({
     initialValues: {
       applicationCode: ''
     },
     onSubmit: (values) => {
-      if (applicationCode == values.applicationCode) {
-        console.log('Ahmet');
+      if (applicationCodes == values.applicationCode) {
+        history.push('/showapplication');
+      } else {
+        history.push('/fail');
       }
     },
     validationSchema

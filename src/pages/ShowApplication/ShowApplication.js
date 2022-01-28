@@ -3,7 +3,7 @@ import React from 'react';
 function ShowApplication() {
   return (
     <div>
-      <h1>Oğuzhan</h1>
+      <h1>Redirection was Done!</h1>
     </div>
   );
 }
