@@ -1,3 +1,5 @@
+<a href="https://pazarama-ticket-app.netlify.app/" target="_blank">Pazarama Ticket App</a>
+
 ## Bitirme projesi
 ### Başvuru / ticket yönetim sistemi
 
